@@ -18,6 +18,10 @@ const Globals = createGlobalStyle`
         }     
         }
 }
+
+li{
+  list-style-type: none;
+}
 `
 
 export default Globals;

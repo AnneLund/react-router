@@ -5,7 +5,7 @@ import {Routes, Route, NavLink} from 'react-router-dom'
 import Notfound from '../Notfound'
 
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
 position: absolute;
 ul{
     display: flex;
@@ -13,13 +13,13 @@ ul{
     justify-content: center;
     gap: 1em;
 li{
-        list-style: none;
+        list-style-type: none;
         text-align: left;
     }    
 }
 `
 
-const UserCard = styled.figure`
+export const Card = styled.figure`
 background-color: antiquewhite;
 padding: 1em;
 box-shadow: grey 5px 5px 5px;
@@ -66,10 +66,11 @@ const CompanyInfo = styled.div`
     }
 `
 
-const Section = styled.article`
+export const Section = styled.article`
     display: flex;
     flex-direction: column;
     min-height: 70vh;
+    gap: 1em;
 
 `
 
@@ -114,7 +115,7 @@ useEffect(() => {
         
         {apiData && apiData?.map((user, i) => <Route key={user.id} path={`${user.firstName}`} element={
 
-        <UserCard>
+        <Card>
             <img src={user.image} alt={user.firstName}/>
             <figcaption>
             <h4>{user.firstName}</h4>
@@ -137,7 +138,7 @@ useEffect(() => {
             </CompanyInfo> : null}
         </figcaption>
            
-        </UserCard>
+        </Card>
         } />)}
         
         <Route path='*' element={<Notfound switchValue="booksindex"/>}/>

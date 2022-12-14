@@ -4,19 +4,9 @@ import styled from 'styled-components'
 import { Link, Routes, Route } from 'react-router-dom'
 import Notfound from '../Notfound'
 import Categories from '../../Components/Categories'
+import { Nav } from '../Users/UsersIndex'
 
-const Nav = styled.nav`
 
-ul{
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-li{
-        list-style: none;
-        text-align: left;
-    }    
-}
-`
 
 const ProductsIndex = () => {
     const [apiData, setApiData] = useState([])
@@ -36,6 +26,8 @@ useEffect(() => {
 
     renderProducts();
 }, [])
+
+console.log(apiData)
 
   return (
     <>
