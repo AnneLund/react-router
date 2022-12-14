@@ -9,14 +9,13 @@ import ScifiIndex from './SciFi/ScifiIndex';
 const BookIndex = () => {
   return (
     <>
-    <Nav>
+      <Nav>
       <ul>
         <li><Link to="/books/crime">Krimier</Link></li>
         <li><Link to="/books/action">Action</Link></li>
         <li><Link to="/books/scifi">Scifi</Link></li>
       </ul>
     </Nav>
-
     <Routes>
       <Route path="/" element={<h1>Rodelement</h1>}/>
       <Route path="/crime" element={<Crime/>}/>
@@ -24,6 +23,8 @@ const BookIndex = () => {
       <Route path="/scifi/*" element={<ScifiIndex/>}/>
       <Route path="*" element={<Notfound/>}/>
     </Routes>
+
+  
     </>
   )
 }

@@ -5,8 +5,8 @@ import { Nav } from '../../../Components/Navbar'
 import Notfound from '../../Notfound'
 
 const SciFiGenre = [
-  {title: "Dystopian", path: "/books/scifi/dystopia", element: <Categories catStr="Dystopia"/>},
-  {title: "Deep Space", path: "/books/scifi/deepspace", element: <Categories catStr="Deepspace"/>}
+  {title: "Dystopian", path: "/books/scifi/dystopia", element: <Categories catStr="Dystopian"/>},
+  {title: "Deep Space", path: "/books/scifi/deepspace", element: <Categories catStr="Deep Space"/>}
 ]
 
 const ScifiIndex = () => {
